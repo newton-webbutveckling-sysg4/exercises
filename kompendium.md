@@ -5,20 +5,20 @@
 1. [Datatyper, variabler, konsolen](#1-datatyper-variabler-konsolen)
 2. [Kontrollstrukturer och programflöde](#2-kontrollstrukturer-och-programflöde)
 3. [Funktioner](#3-funktioner)
-	1. [Rekursion](#1-rekursion)
+   1. [Rekursion](#1-rekursion)
 4. [Listor](#4-listor)
-	1. [Läsförståelseövningar på arrayer och funktioner](#1-läsförståelseövningar-på-arrayer-och-funktioner)
-	2. [Övningar som bygger på läsövningarna ovan](#2-övningar-som-bygger-på-läsövningarna-ovan)
-	3. [Övningar på att skriva kod med arrayer och funktioner](#3-övningar-på-att-skriva-kod-med-arrayer-och-funktioner)
-	4. [Sorteringsövningar](#4-sorteringsövningar)
+   1. [Läsförståelseövningar på arrayer och funktioner](#1-läsförståelseövningar-på-arrayer-och-funktioner)
+   2. [Övningar som bygger på läsövningarna ovan](#2-övningar-som-bygger-på-läsövningarna-ovan)
+   3. [Övningar på att skriva kod med arrayer och funktioner](#3-övningar-på-att-skriva-kod-med-arrayer-och-funktioner)
+   4. [Sorteringsövningar](#4-sorteringsövningar)
 5. [Objekt](#5-objekt)
-	1. [JSON](#1-json)
+   1. [JSON](#1-json)
 6. [Higher order functions](#6-higher-order-functions)
 7. [Git](#7-git)
 8. [HTML och CSS](#8-html-och-css)
-	1. [Grundläggande HTML och CSS](#1-grundläggande-html-och-css)
-	2. [CSS selektorer](#2-css-selektorer)
-	3. [Transition och transform](#3-transition-och-transform)
+   1. [Grundläggande HTML och CSS](#1-grundläggande-html-och-css)
+   2. [CSS selektorer](#2-css-selektorer)
+   3. [Transition och transform](#3-transition-och-transform)
 9. [Layout med CSS](#9-layout-med-css)
 10. [DOM-manipulation med JavaScript](#10-dom-manipulation-med-javascript)
 11. [Events](#11-events)
@@ -34,40 +34,39 @@ Utgå från [detta kodexempel i repl.it](https://repl.it/@david_zocom/UserInput)
 
 0 Ta reda på hur man öppnar JavaScript-konsolen (Console) i din favoritwebbläsare.
 
-1 Vilka datatyper är följande uttryck? Tips: använd `typeof` för att kontrollera ditt svar
-
+1 Vilka datatyper är följande uttryck? Tips: använd `typeof` för att kontrollera ditt svar. <br>
 Exempelvis kan man svara att första uppgiften är _datatypen Number_ och har _värdet 1,01_. Se till att du förstår _varför_ resultatet blir som det blir.
 
+```
+1   1.01                          14   true + true + false
+2   'false'                       15   5 && 8
+3   null                          16   5 || 8
+4   pancake                       17   !5
+5   1 / 0                         18   !!5
+6   false || true                 19   true && false || false && true
+7   "123" - 0                     20   typeof (typeof true)
+8   "1000" / 10                   21   1 + 2 * 3 + 4 * 5 + 6
+9   123.4 - ''                    22   2 < 3
+10  '5' + "0" / '2'               23   'två' < 'tre'
+11  '5' + "0" / '5' + 0           24   17 === 17.0
+12  '1' + '5' - '4' * '2' - '3'   25   17 === '17'
+13  'kalle' - 5                   26   17.000000000000000000001 == 17
+27  undefined || null || 0 || false || "foo"
+```
+
+2 Vilket värde kommer variabeln `z` att ha efter att respektive kodrad har körts? (1 svar per rad)
 
 ```
-1	1.01	14	true + true + false
-2	'false'	15	5 && 8
-3	null	16	5 || 8
-4	pancake	17	!5
-5	1 / 0	18	!!5
-6	false || true	19	true && false || false && true
-7	"123" - 0	20	typeof (typeof true)
-8	"1000" / 10	21	1 + 2 * 3 + 4 * 5 + 6
-9	123.4 - ''	22	2 < 3
-10	'5' + "0" / '2'	23	'två' < 'tre'
-11	'5' + "0" / '5' + 0	24	17 === 17.0
-12	'1' + '5' - '4' * '2' - '3'	25	17 === '17'
-13	'kalle' - 5	26	17.000000000000000000001 == 17
-27	undefined || null || 0 || false || "foo"
-```
+// Obs! Innan du börjar, använd "let" för att skapa variabler:
+let x, y, z;
 
-
-2 Vilket värde kommer variabeln `z` att ha efter att respektive kodrad har körts? (1 svar per rad) Kör den här kodraden före varje rad när du testar: `let x, y, z;`
-
-
-```
-1	z = 5;
-2	z++;
-3	--z;
-4	z += 15;
-5	x = 8;  y = 16;  z = y - x;
-6	x = 10;  z = x++;
-7	x = 2;  y = 5;  x = x + y;  y = x + y;  z = y;
+1   z = 5;
+2   z++;
+3   --z;
+4   z += 15;
+5   x = 8;  y = 16;  z = y - x;
+6   x = 10;  z = x++;
+7   x = 2;  y = 5;  x = x + y;  y = x + y;  z = y;
 ```
 
 
@@ -109,37 +108,37 @@ _Extra utmaning_: slumpa det hemliga talet med hjälp av Math.random och farbror
 ```
 let text = '';
 for( let i=0; i<6; i++ ) {
-	for( let j=0; j<8; j++ ) {
-		if( (i + j) % 2 === 0)
-			text += '#';
-		else
-			text += '.';
-	}
-	text += '\n';
+   for( let j=0; j<8; j++ ) {
+      if( (i + j) % 2 === 0)
+         text += '#';
+      else
+         text += '.';
+   }
+   text += '\n';
 }
 console.log(text);
 ```
 
-Ändra koden så att den skriver ut:
+Ändra koden så att den skriver ut följande mönster:
 
 ```
 9b          9c          9d          9e          9f          9g
-#.......	#.......	..###...	..#.....	....##..	#....#..
-#.......	.#......	..###...	..#.....	....#...	.#..#...
-#.......	..#.....	..###...	########	...##...	..##....
-#.......	...#....	..###...	..#.....	..#.#...	..##....
-#.......	....#...	..###...	..#.....	.#..#...	.#..#...
-#.......	.....#..	..###...	..#.....	#...#...	#....#..
+#.......   #.......   ..###...   ..#.....   ....##..   #....#..
+#.......   .#......   ..###...   ..#.....   ....#...   .#..#...
+#.......   ..#.....   ..###...   ########   ...##...   ..##....
+#.......   ...#....   ..###...   ..#.....   ..#.#...   ..##....
+#.......   ....#...   ..###...   ..#.....   .#..#...   .#..#...
+#.......   .....#..   ..###...   ..#.....   #...#...   #....#..
 ```
 
 ```
 9h          9i          9j          9k
-#.#.#.#.	........	.#O.#O.#	..#..#..
-#.#.#.#.	.######.	O.#O.#O.	..#..#..
-#.#.#.#.	.#....#.	#O.#O.#O	..#..#..
-#.#.#.#.	.#....#.	.#O.#O.#	........
-#.#.#.#.	.######.	O.#O.#O.	.#.#.#.#
-#.#.#.#.	........	#O.#O.#O	#.#.#.#.
+#.#.#.#.   ........   .#O.#O.#   ..#..#..
+#.#.#.#.   .######.   O.#O.#O.   ..#..#..
+#.#.#.#.   .#....#.   #O.#O.#O   ..#..#..
+#.#.#.#.   .#....#.   .#O.#O.#   ........
+#.#.#.#.   .######.   O.#O.#O.   .#.#.#.#
+#.#.#.#.   ........   #O.#O.#O   #.#.#.#.
 ```
 
 
@@ -150,58 +149,58 @@ console.log(text);
 
 
 ```
-1	function foo() {
-2		console.log("test");
-3	}
-4	foo("hej");
+1   function foo() {
+2      console.log("test");
+3   }
+4   foo("hej");
 
-1	let a = foo(3);
-2	console.log(a);
-3	function foo(i) {
-4		return i * i;
-5	}
+1   let a = foo(3);
+2   console.log(a);
+3   function foo(i) {
+4      return i * i;
+5   }
 ```
 
 
 
 ```
-1	console.log( foo(3, 5) );
-2	function foo(x, y) {
-3		return x * y;
-4	}
+1   console.log( foo(3, 5) );
+2   function foo(x, y) {
+3      return x * y;
+4   }
 
-1	let x = 2;
-2	let y = 3
-3	let a = foo(foo(x) + foo(y));
-4	console.log(a);
-5	function foo(i) {
-6		return 5 * i;
-7	}
+1   let x = 2;
+2   let y = 3
+3   let a = foo(foo(x) + foo(y));
+4   console.log(a);
+5   function foo(i) {
+6      return 5 * i;
+7   }
 ```
 
 
 
 ```
-1	let a = 5;
-2	function foo(a) {
-3		a++;
-4	}
-5	a += 2;
-6	console.log(a);
+1   let a = 5;
+2   function foo(a) {
+3      a++;
+4   }
+5   a += 2;
+6   console.log(a);
 ```
 
 
 
 ```
-1	var foo = function(i) {
-2		return 2*i*i;
-3	};
-4	var goo = function(x, y)
-5	{
-6		return x(y);
-7	};
-8	var a = goo(foo, 3);
-9	console.log(a);
+1   var foo = function(i) {
+2      return 2*i*i;
+3   };
+4   var goo = function(x, y)
+5   {
+6      return x(y);
+7   };
+8   var a = goo(foo, 3);
+9   console.log(a);
 ```
 
 
@@ -221,11 +220,11 @@ Exempel:
 
 
 ```
-sameDataType('test', 'topp')	→ true
+sameDataType('test', 'topp')   → true
 ```
 
 
-`sameDataType(5, '5')		→ false`.
+`sameDataType(5, '5')      → false`.
 
 6 Skriv en funktion som avrundar ett tal till två decimaler. Tips: man kan använda Math.round(x) för att avrunda ett tal till närmast heltal.
 
@@ -294,7 +293,7 @@ Dessa övningar läser du och tänker ut svaret på. De handlar om allt vi gått
 
 ```
 function stringEcho(str) {
-	console.log(str + str);
+   console.log(str + str);
 }
 stringEcho("hej");
 ```
@@ -304,8 +303,8 @@ stringEcho("hej");
 
 ```
 function soundLikeACat(times) {
-	for(let i=0; i<times; i++)
-		console.log("meow");
+   for(let i=0; i<times; i++)
+      console.log("meow");
 }
 soundLikeACat(5);
 ```
@@ -315,8 +314,8 @@ soundLikeACat(5);
 
 ```
 function soundLikeAnAnimal(sound, times) {
-	for(let i=0; i<times; i++)
-		console.log("meow");
+   for(let i=0; i<times; i++)
+      console.log("meow");
 }
 soundLikeAnAnimal("bark", 3);
 ```
@@ -337,9 +336,9 @@ console.log("My favourite animal is " + animals[0]);
 let animals = ["dog", "cat", "zebra", "horse", "cow"];
 animals.unshift("elephant");
 if(animals.indexOf("pig")=== -1)
-	animals.push("pig");
+   animals.push("pig");
 else
-	animals[animals.length-1] = "pig";
+   animals[animals.length-1] = "pig";
 console.log("My favourite animal is " + animals[0]);
 ```
 
@@ -349,8 +348,8 @@ console.log("My favourite animal is " + animals[0]);
 ```
 let animals = ["dog", "cat", "zebra", "horse", "monkey", "pig", "cow"];
 for(let i=0; i<animals.length; i++) {
-	if(i>3)
-		console.log(animals[i];
+   if(i>3)
+      console.log(animals[i];
 }
 ```
 
@@ -363,23 +362,23 @@ const COW = 1;
 const DOG = 2;
 
 function makeAnimals(animalId, numberOfAnimals) {
-	let animals = [];
-	for(let i=0; i<numberOfAnimals; i++) {
-		switch(animalId) {
-			case PIG:
-				animals.push("pig");
-				break;
-			case COW:
-				animals.push("cow");
-				break;
-			case DOG:
-				animals.push("dog");
-				break;
-			default:
-				return ["Error!"];
-		}
-	}
-	return animals;
+   let animals = [];
+   for(let i=0; i<numberOfAnimals; i++) {
+      switch(animalId) {
+         case PIG:
+            animals.push("pig");
+            break;
+         case COW:
+            animals.push("cow");
+            break;
+         case DOG:
+            animals.push("dog");
+            break;
+         default:
+            return ["Error!"];
+      }
+   }
+   return animals;
 }
 let arr = makeAnimals(DOG, 3);
 console.log(arr);
@@ -390,7 +389,7 @@ console.log(arr);
 
 ```
 function stringEcho(str) {
-	return str + str;
+   return str + str;
 }
 console.log( stringEcho(stringEcho(".a.")+"b.") + stringEcho(".c") );
 ```
@@ -400,12 +399,12 @@ console.log( stringEcho(stringEcho(".a.")+"b.") + stringEcho(".c") );
 
 ```
 function pigSort(unsortedArr) {
-	let pigArr = [];
-	while(unsortedArr.length > 0) {
-		pigArr.push("pig");
-		unsortedArr.shift();
-	}
-	return pigArr;
+   let pigArr = [];
+   while(unsortedArr.length > 0) {
+      pigArr.push("pig");
+      unsortedArr.shift();
+   }
+   return pigArr;
 }
 
 let arr = ["dog", "cat", "zebra", "horse", "cow"];
@@ -423,11 +422,11 @@ const DOG = 2;
 const ANIMAL_NAMES = ["pig", "cow", "dog", "animal"];
 
 function makeAnimals(animalId, numberOfAnimals) {
-	let animals = [];
-	for(let i=0; i<numberOfAnimals; i++) {
-		animals.push(ANIMAL_NAMES[animalId]);
-	}
-	return animals;
+   let animals = [];
+   for(let i=0; i<numberOfAnimals; i++) {
+      animals.push(ANIMAL_NAMES[animalId]);
+   }
+   return animals;
 }
 
 function animalSort(animals, animalName) {
@@ -468,15 +467,15 @@ const ITEM_NAME = 0;
 const ITEM_COMPONENTS = 1;
 
 let items = [
-			["Metal", [] ],
-			["Wood", [] ],
-			["Fire", [] ],
-			["Doom", [] ],
-			["Dagger", [METAL, WOOD] ],
-			["Sword", [DAGGER, METAL] ],
-			["Flaming Sword", [SWORD, FIRE] ],
-			["Dagger of Doom", [DAGGER, DOOM] ],
-			["Torch", [FIRE, WOOD] ]
+         ["Metal", [] ],
+         ["Wood", [] ],
+         ["Fire", [] ],
+         ["Doom", [] ],
+         ["Dagger", [METAL, WOOD] ],
+         ["Sword", [DAGGER, METAL] ],
+         ["Flaming Sword", [SWORD, FIRE] ],
+         ["Dagger of Doom", [DAGGER, DOOM] ],
+         ["Torch", [FIRE, WOOD] ]
 ];
 
 console.log("The " + items[SWORD][ITEM_NAME] + " is made of " + items[SWORD][ITEM_COMPONENTS]);
@@ -770,25 +769,25 @@ Extra utmaning: gör så att den inre listan bara visas när man hovrar med muse
 
 
 ```
-1.	<body>
-2.	<style> ul { border: black solid 1px; } </style>
-3.	<ul>
-4.		<li>first item</li>
-5.		<li><span class="strongly>second item</li>
-6.	</ol>
-7.	<div id="popup">Message that should be fixed in a corner<div/>
-8.	<div id="layout">
-9.		<main/>
-10.			<section> <h1>The best images</h1>
-11.				<p> Here's my favourite image:
-12.					<img>http('server.com/image.gif')</img>
-13.				</p> <!-- to do: add some more images
-14.			</section>
-15.		</main>
-16.		<aside></aside>
-17.	</div>
-18.	<span>In conclusion: <p>To do</p> </span>
-19.	</html>
+1.   <body>
+2.   <style> ul { border: black solid 1px; } </style>
+3.   <ul>
+4.      <li>first item</li>
+5.      <li><span class="strongly>second item</li>
+6.   </ol>
+7.   <div id="popup">Message that should be fixed in a corner<div/>
+8.   <div id="layout">
+9.      <main/>
+10.         <section> <h1>The best images</h1>
+11.            <p> Here's my favourite image:
+12.               <img>http('server.com/image.gif')</img>
+13.            </p> <!-- to do: add some more images
+14.         </section>
+15.      </main>
+16.      <aside></aside>
+17.   </div>
+18.   <span>In conclusion: <p>To do</p> </span>
+19.   </html>
 ```
 
 
