@@ -11,7 +11,7 @@
 
 3a Ta reda på hur man använder direktivet `v-show`. Använd det för att göra en button som togglar ett annat HTML-element. När appen visas ska man se texten: "Now you see me". När man klickar på knappen ska elementet bli osynligt.
 
-3b Ändra så att man kan klicka flera gånger på elementet för att göra elementet med texten synligt igen.
+3b Ändra så att man kan klicka flera gånger på knappen för att göra elementet med texten synligt igen.
 
 3c Lägg till ett element med texten "Now you don't". Det ska synas när texten i 3a *inte* syns.
 
