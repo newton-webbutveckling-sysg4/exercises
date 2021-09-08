@@ -40,4 +40,10 @@
 
 3 Skapa komponenter av uppgift 2.3, 2.4 och 2.5.
 
-4 Gör [MyTunes](webbprojekt.md) som en Vue-app. Lägg till nya komponenter när filerna blir för stora. (Försök hålla dina komponenter under 200 rader kod.)
+4a Fruktsallad - gör en app som visar två listor. Den första ska ha namn på frukter, den andra ska vara tom. När man klickar på ett fruktnamn i första listan, ska den frukten läggas till den tomma listan.
+
+4b Nu ska frukterna flyttas, alltså inte ligga kvar utan tas bort ur den första arrayen.
+
+4c Lägg listorna i varsin komponent, om du inte redan gjort det. Tips: kan du använda samma komponent till båda listorna?
+
+5 Gör [MyTunes](webbprojekt.md) som en Vue-app. Lägg till nya komponenter när filerna blir för stora. (Försök hålla dina komponenter under 200 rader kod.)
