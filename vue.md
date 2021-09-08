@@ -27,3 +27,17 @@
 
 
 ## 2 Skicka data mellan komponenter
+
+1 Lägg din räknare i en egen komponent. (uppgift 1.2 ovan) Testa att använda den nya komponenten tre gånger i App.vue. Kontrollera att du har tre oberoende räknare.
+
+2a Gör en komponent som visar en `<span>` med text. Texten ska skickas från dess parent, med hjälp av props.
+
+2b När man klickar på `<span>` ska elementet bytas mot ett input-fält. Man ska kunna ändra texten genom att skriva i input-fältet. När man klickar utanför fältet ska det bytas tillbaka till ett `<span>` element. (Tips 1: använd v-model. Tips 2: blur-händelsen.)
+
+2c Gör så att komponenten emittar ett event när man ändrat texten.
+
+2d* Gör så att man kan trycka Enter i input-fältet också.
+
+3 Skapa komponenter av uppgift 2.3, 2.4 och 2.5.
+
+4 Gör [MyTunes](webbprojekt.md) som en Vue-app. Lägg till nya komponenter när filerna blir för stora. (Försök hålla dina komponenter under 200 rader kod.)
