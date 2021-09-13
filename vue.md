@@ -47,3 +47,15 @@
 4c Lägg listorna i varsin komponent, om du inte redan gjort det. Tips: kan du använda samma komponent till båda listorna?
 
 5 Gör [MyTunes](webbprojekt.md) som en Vue-app. Lägg till nya komponenter när filerna blir för stora. (Försök hålla dina komponenter under 200 rader kod.)
+
+
+## 3
+1a Skapa en Vue-app som skickar ett GET request till https://forverkliga.se/JavaScript/api/simple.php?world. Den ska visa informationen i en lista eller en tabell. (`<ul>` eller `<table>`.) Visa namn och befolkningsmängd.
+
+1b Formatera datan så att befolkningen visas i antal miljoner, med två decimaler. (Tips: Number.toFixed(2) och Math.round() är användbara. )
+
+2 Skapa en Vue-app som skickar ett request till [sunrise/sunset API](https://sunrise-sunset.org/api). Den ska visa när solen går upp och ner idag i Göteborg.
+
+3 URL:en https://forverkliga.se/JavaScript/api/crud.php är ett API som simulerar en databas. Gör en Vue-app som använder det för att låta användaren spara data i databasen. Antingen kan du utöka MyTunes så att det använder API:et, eller hitta på något eget.
+
+4 https://github.com/public-apis/public-apis innehåller länkar till öppna API:er. Bygg en Vue-app som använder något intressant API. (Tips: välj ett med Auth=No/apiKey och CORS=Yes.)
